@@ -1,6 +1,7 @@
 import React from 'react';
-import { render } from 'react-dom';
-
 import App from '@layouts/App';
+import { createRoot } from 'react-dom/client';
 
-render(<App />, document.querySelector('#app'));
+const rootNode = document.querySelector('#app');
+const root = createRoot(rootNode!);
+root.render(<App />);
