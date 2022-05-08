@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,  // import * as React from 'react'; -> import React from 'react';
+    "sourceMap": true,  // error 시 에러 위치 찾기 편해서
+    "lib": ["ES2020", "DOM"],
+    "jsx": "react", // React JSX 명시
+    "module": "esnext", // 최신 모듈임을 명시(import, export)
+    "moduleResolution": "Node",
+    "target": "es5",  // ES2020 작성 -> es5 변환
+    "strict": true,
+    "resolveJsonModule": true,
+    "baseUrl": ".", // "baseUrl", "paths" -> import ./../../ 이거 싫어서 지정함
+    "paths": {
+      "@hooks/*": ["hooks/*"],
+      "@components/*": ["components/*"],
+      "@layouts/*": ["layouts/*"],
+      "@pages/*": ["pages/*"],
+      "@utils/*": ["utils/*"]
+    }
+  }
+}
